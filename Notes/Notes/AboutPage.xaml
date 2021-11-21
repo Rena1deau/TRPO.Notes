@@ -6,12 +6,13 @@
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#ffefd5}"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
                VerticalOptions="Center"
                HeightRequest="64" />
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
-                     Margin="20"
+                     Margin="{StaticResource PageMargin}"
                      Spacing="20">
             <Label FontSize="22">
                 <Label.FormattedText>
@@ -25,8 +26,8 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="This application is written by Julia Gorbulina 🦊 in XAML and C# using the Xamarin platform." />
-            <Button Text="Learn more about Xamarin 🔎"
+            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+            <Button Text="Learn more"
                     Clicked="OnButtonClicked" />
         </StackLayout>
     </Grid>
